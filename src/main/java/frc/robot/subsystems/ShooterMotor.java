@@ -7,6 +7,7 @@
 
 package frc.robot.subsystems;
 
+import com.revrobotics.CANEncoder;
 import com.revrobotics.CANSparkMax;
 import com.revrobotics.CANSparkMaxLowLevel.MotorType;
 
@@ -29,6 +30,8 @@ public class ShooterMotor extends SubsystemBase {
   }
   private CANSparkMax leftShooter = new CANSparkMax(Constants.LEFTSHOOTER, MotorType.kBrushless);
   private CANSparkMax rightShooter = new CANSparkMax(Constants.RIGHTSHOOTER, MotorType.kBrushless);
+  public CANEncoder leftEncoder = leftShooter.getEncoder();
+  public CANEncoder rightEncoder = rightShooter.getEncoder();
   private boolean isHigh = false;
   public void lowGear(){
     //Constants.isHigh = true; 
@@ -50,6 +53,7 @@ public class ShooterMotor extends SubsystemBase {
     StorageMotor.GetInstance().setStorageMotor();
     StorageSol.GetInstance().ShooterIn();
     isHigh = true;
+    leftEncoder.getCountsPerRevolution();
   }
   public double findDistance(){
       return (98.25-20)/Math.tan(20+Constants.a1);

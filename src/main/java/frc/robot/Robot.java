@@ -74,6 +74,7 @@ public class Robot extends TimedRobot {
     ShooterMotor.GetInstance().setDefaultCommand(ShooterMotorCommands.GetInstance());
     ControlPannelMotor.GetInstance().setDefaultCommand(ControlPannelMotorCommands.GetInstance());
     CompressorSub.GetInstance().setDefaultCommand(CompressorCommands.GetInstance());
+
   }
 
   /**
@@ -103,6 +104,8 @@ public class Robot extends TimedRobot {
     CommandScheduler.getInstance().run();
     SmartDashboard.putBoolean("stick", RobotContainer.GetInstance().GetTurntableButtonReleased());
     SmartDashboard.putNumber("Distance", ShooterMotor.GetInstance().findDistance());
+    SmartDashboard.putNumber("Left RPM", ShooterMotor.GetInstance().leftEncoder.getVelocity());
+    SmartDashboard.putNumber("Right RPM", ShooterMotor.GetInstance().rightEncoder.getVelocity());
   }
 
   /**

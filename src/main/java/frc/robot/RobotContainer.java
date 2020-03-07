@@ -57,7 +57,6 @@ public class RobotContainer {
   JoystickButton lowGearButton = new JoystickButton(leftJoystick, Constants.LOWGEARBUTTON);
   JoystickButton compressorButton = new JoystickButton(leftJoystick, Constants.COMPRESSORBUTTON);
   JoystickButton autoAimButton = new JoystickButton(rightJoystick, Constants.AUTOAIMBUTTON);
-
   private static RobotContainer instance;
   public static RobotContainer GetInstance(){
     if (instance==null)
