@@ -36,7 +36,7 @@ public class DrivetrainCommands extends CommandBase {
     if (RobotContainer.GetInstance().getAutoAimButton()) {
       Drivetrain.GetInstance().autoAim();
     } else {
-      NetworkTableInstance.getDefault().getTable("limelight").getEntry("ledMode").setNumber(3);
+      NetworkTableInstance.getDefault().getTable("limelight").getEntry("ledMode").setNumber(0);
     }
   }
 

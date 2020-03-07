@@ -37,7 +37,7 @@ public class Drivetrain extends SubsystemBase {
     double minValue = 0.10;
     double motorValue = 0;
     boolean isBad = false;
-    NetworkTableInstance.getDefault().getTable("limelight").getEntry("ledMode").setNumber(0);
+    NetworkTableInstance.getDefault().getTable("limelight").getEntry("ledMode").setNumber(3);
     if(Constants.x<=.5 && Constants.x>=-.5){
       leftMotor.set(0);
       rightMotor.set(0);
