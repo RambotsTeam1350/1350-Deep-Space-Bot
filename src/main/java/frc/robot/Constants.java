@@ -45,7 +45,7 @@ public final class Constants {
     public static final int STORAGESOL1 = 6;
     public static final int SOTRAGESOL2 = 7;
  	public static final int STORAGEMOTOR = 1;
-    public static final double STORAGEMOTORSPEED = .55;
+    public static final double STORAGEMOTORSPEED = .7;
     //gearbox
 	public static final int GEARBOXPORT1 = 2;
 	public static final int GEARBOXPORT2 = 3;

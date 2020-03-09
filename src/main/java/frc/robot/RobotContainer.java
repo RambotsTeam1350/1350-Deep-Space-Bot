@@ -85,10 +85,12 @@ public class RobotContainer {
     return lowGearButton.get();
   }
   public double getLeftJoystick(){
-    return leftJoystick.getRawAxis(1);
+    //return leftJoystick.getRawAxis(1);
+    return xBox.getX(Hand.kLeft);
   }
   public double getRightJoystick(){
-    return rightJoystick.getRawAxis(1);
+    //return rightJoystick.getRawAxis(1);
+    return xBox.getX(Hand.kRight);
   }
   public boolean GetElevatorUp(){
     return xBox.getBumperPressed(Hand.kRight);
