@@ -25,16 +25,21 @@ public class WinchSub extends SubsystemBase {
     return instance;
   }
   private Victor wenchMotor = new Victor(Constants.WENCHMOTORPORT);
+  private Victor wenchMotor2 = new Victor(Constants.WENCHMOTORPORT2);
+
   public void SetWench(){
     Constants.isHigh = false; 
     wenchMotor.set(Constants.WENCHSPEED);
+    wenchMotor2.set(-Constants.WENCHSPEED);
   }
   public void stopWinch(){
     //Constants.isHigh = true; 
     wenchMotor.set(0);
+    wenchMotor2.set(0);
   }
   public void SetReverse(){
     wenchMotor.set(-Constants.WENCHSPEED);
+    wenchMotor2.set(Constants.WENCHSPEED);
   }
   @Override
   public void periodic() {

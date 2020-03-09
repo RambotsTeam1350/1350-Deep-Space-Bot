@@ -27,7 +27,8 @@ public final class Constants {
     public static final double AUTOTURNSPEED = .7;
     //Elevator
 	public static final int ELEVATORMOTORPORT = 3;
-	public static final int WENCHMOTORPORT = 2;
+    public static final int WENCHMOTORPORT = 2;
+    public static final int WENCHMOTORPORT2 = 4;
 	public static final double ELEVATORSPEED = .5;
 	public static final double WENCHSPEED = 1;
     //Intake
