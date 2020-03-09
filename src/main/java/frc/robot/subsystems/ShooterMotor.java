@@ -46,7 +46,7 @@ public class ShooterMotor extends SubsystemBase {
     leftShooter.set(-Constants.HIGHGEARSPEED);
     rightShooter.set(Constants.HIGHGEARSPEED);
     try{
-      Thread.sleep(750);
+      Thread.sleep(1000);
     } catch(Exception ex){
       SmartDashboard.putString("ERROR", "high gear had trouble sleeping");
     }
