@@ -174,10 +174,10 @@ public class Robot extends TimedRobot {
   
       if(autoTimer.get()<Constants.PHASE2TIME){
         Drivetrain.GetInstance().spinToTarget();
-        intakePistons.GetInstance().intakeIn();
+        //intakePistons.GetInstance().intakeIn();
       } else if (autoTimer.get()>=Constants.PHASE2TIME && autoTimer.get()<Constants.PHASE3TIME){
         Drivetrain.GetInstance().autoAim();
-        intakePistons.GetInstance().intakeOutAuto();
+        //intakePistons.GetInstance().intakeOutAuto();
       } else if (autoTimer.get()>=Constants.PHASE3TIME && autoTimer.get()<Constants.PHASE4TIME){
           ShooterMotor.GetInstance().highGear();
           if(StorageSol.GetInstance().getIsOut()==false)
