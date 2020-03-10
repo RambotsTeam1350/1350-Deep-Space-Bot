@@ -56,7 +56,7 @@ public class ShooterMotor extends SubsystemBase {
     leftEncoder.getCountsPerRevolution();
   }
   public double findDistance(){
-      return (98.25-20)/Math.tan(20+Constants.y);
+      return (98.25-20)/Math.tan(23+Constants.y);
   }
   public void reverse(){
     leftShooter.set(Constants.HIGHGEARSPEED);

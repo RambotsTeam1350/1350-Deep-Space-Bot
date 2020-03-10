@@ -44,7 +44,7 @@ public class intakeSolCommands extends CommandBase {
       timer.stop();
       timer.reset();
     }
-    if(RobotContainer.GetInstance().getCompressorButton() && timer.get()==0){
+    if(RobotContainer.GetInstance().getCompressorButton()>0 && timer.get()==0){
       if (isOut){
         intakePistons.GetInstance().intakeIn();
         IntakeMotor.GetInstance().IntakeMotorOff();

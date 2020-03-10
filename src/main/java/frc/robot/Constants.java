@@ -21,6 +21,7 @@ public final class Constants {
 	public static final int LEFTJOYSTICKPORT = 0;
     public static final int RIGHTJOYSTICKPORT = 1;
     public static final int XBOX = 2;
+    public static final int XBOX2 = 3;
     //Drivetrain
 	public static final int LEFTMOTOR = 0;
     public static final int RIGHTMOTOR =1;
@@ -73,6 +74,7 @@ public final class Constants {
     public static double a1;
     //Gearbox variables
     public static boolean isHigh = false;
+
 
 
 

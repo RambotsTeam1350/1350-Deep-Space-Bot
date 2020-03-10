@@ -52,6 +52,7 @@ public class RobotContainer {
   Joystick leftJoystick = new Joystick(Constants.LEFTJOYSTICKPORT);
   Joystick rightJoystick = new Joystick(Constants.RIGHTJOYSTICKPORT);
   XboxController xBox = new XboxController(Constants.XBOX);
+  XboxController xBox2 = new XboxController(Constants.XBOX2);
 
   JoystickButton highGearButton = new JoystickButton(leftJoystick, Constants.HIGHGEARBUTTON);
   JoystickButton lowGearButton = new JoystickButton(leftJoystick, Constants.LOWGEARBUTTON);
@@ -75,22 +76,25 @@ public class RobotContainer {
   public boolean getAutoAimButton(){
     return autoAimButton.get();
   }
-  public boolean getCompressorButton(){
-    return compressorButton.get();
+  public double getCompressorButton(){
+    //return compressorButton.get();
+    return xBox2.getTriggerAxis(Hand.kLeft);
   }
   public boolean getHighGearButton(){
-    return highGearButton.get();
+    //return highGearButton.get();
+    return xBox.getBumperPressed(Hand.kRight);
   }
   public boolean lowGearButton(){
-    return lowGearButton.get();
+    //return lowGearButton.get();
+    return xBox.getBumperPressed(Hand.kLeft);
   }
   public double getLeftJoystick(){
     //return leftJoystick.getRawAxis(1);
-    return xBox.getX(Hand.kLeft);
+    return xBox2.getX(Hand.kLeft);
   }
   public double getRightJoystick(){
     //return rightJoystick.getRawAxis(1);
-    return xBox.getX(Hand.kRight);
+    return xBox2.getX(Hand.kRight);
   }
   public boolean GetElevatorUp(){
     return xBox.getBumperPressed(Hand.kRight);

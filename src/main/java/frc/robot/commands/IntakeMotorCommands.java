@@ -41,7 +41,7 @@ public class IntakeMotorCommands extends CommandBase {
       timer.reset();
     }
     //if this doesn't work try getting rid of the timer!!!
-    if(RobotContainer.GetInstance().getCompressorButton() && timer.get()==0){
+    if(RobotContainer.GetInstance().getCompressorButton()>0 && timer.get()==0){
       timer.start();
       if(IntakeMotor.GetInstance().getIsOn()==false){
        IntakeMotor.GetInstance().setIntakeMotor();
